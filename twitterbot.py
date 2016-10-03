@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # coding=utf-8
 # pip install tweepy ja twisted tai ei toimi
-# aseta nickname, api-avaimet (https://apps.twitter.com/), twitter-user (toiseksi viimeisellä rivillä) ja irc-serveri (viimeisellä rivillä)
+# aseta nickname, api-avaimet (https://apps.twitter.com/), twitter-user (toiseksi viimeisellä rivillä) 
+# ja irc-serveri (viimeisellä rivillä)
 # käyttö: !t viesti
 import sys, tweepy, time
 
