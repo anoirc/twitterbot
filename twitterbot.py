@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # coding=utf-8
 # pip install tweepy ja twisted tai ei toimi
-# aseta nickname, api-avaimet (https://apps.twitter.com/), twitter-user (toiseksi viimeisell‰ rivill‰) 
-# ja irc-serveri (viimeisell‰ rivill‰)
-# k‰yttˆ: !t viesti
+# aseta nickname, api-avaimet (https://apps.twitter.com/), twitter-user (toiseksi viimeisell√§ rivill√§) 
+# ja irc-serveri (viimeisell√§ rivill√§)
+# k√§ytt√∂: !t viesti
 import sys, tweepy, time
 
 from twisted.internet import defer, endpoints, protocol, reactor, task
@@ -42,7 +42,7 @@ class MyFirstIRCProtocol(irc.IRCClient):
         func = getattr(self, 'command_' + command, None)
         # Or, if there was no function, ignore the message.
         currenttime = int(time.time())
-        # muokkaa t‰m‰ if-lause jos haluat muuttaa cooldown-aikaa tai l‰pip‰‰sevi‰ viestej‰
+        # muokkaa t√§m√§ if-lause jos haluat muuttaa cooldown-aikaa tai l√§pip√§√§sevi√§ viestej√§
         if func is None or (currenttime-self.lasttime < 60):
             return "alle 60 sekuntia"
         # maybeDeferred will always return a Deferred. It calls func(rest), and
@@ -75,7 +75,7 @@ class MyFirstIRCProtocol(irc.IRCClient):
 
     def command_t(self, rest):
         if len(rest.decode('utf-8')) > 140:
-            return "yli 140 merkki‰"
+            return "yli 140 merkki√§"
         else:
             api.update_status(rest)
             url = 'http://twitter.com/statuses/%s' % api.user_timeline(id=user)[0].id
@@ -83,7 +83,7 @@ class MyFirstIRCProtocol(irc.IRCClient):
 
     def command_tr(self, rest):
         if len(rest.split(' ', 1)[1].decode('utf-8')) > 140:
-            return "yli 140 merkki‰"
+            return "yli 140 merkki√§"
         else:
             api.update_status(rest.split(' ', 1)[1], in_reply_to_status_id=rest.split(' ', 1)[0])
             url = 'http://twitter.com/statuses/%s' % api.user_timeline(id=user)[0].id
@@ -91,7 +91,7 @@ class MyFirstIRCProtocol(irc.IRCClient):
 
 class MyFirstIRCFactory(protocol.ReconnectingClientFactory):
     protocol = MyFirstIRCProtocol
-    channels = ['!7D28Pkuvalauta']
+    channels = ['!irc-channel']
 
 
 def main(reactor, description):
