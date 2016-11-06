@@ -6,6 +6,6 @@ twitter bot features:
 -botin prosessi kaatuilee, selvitä miksi (ilmeisesti ongelmia reconnectauksen kanssa eli ota selvää connect/reconnect/disconnect-systeemin toiminnasta)
 -logiominaisuus debuggausta varten (importlogging)
 -rivinvaihto kuntoon
--chardet detection (  y = chardet.detect(rest) if y['encoding'] != 'utf-8' or y['encoding'] != 'ascii': rest = rest.decode(y['encoding']).encode('utf-8') <- tos hostaaja ano
+-merkistöt kuntoon eli chardet detection (  y = chardet.detect(rest) if y['encoding'] != 'utf-8' or y['encoding'] != 'ascii': rest = rest.decode(y['encoding']).encode('utf-8') <- tos hostaaja ano
                       coodasin sulle chardet detectio )
                       
