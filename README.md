@@ -1,1 +1,1 @@
-@poimintoja-twittertiliä päivittävä irc-botti !7D28Pkuvalauta-kanavalle IRCnetissä. Pythonilla tehty purkkaviritys.
+@poimintoja-twittertiliä päivittävä irc-botti mille tahansa irc-kanavalle esim. IRCnetissä. Tällä hetkellä ja mahdollisesti myös pitkälle tulevaisuuteen se on pythonilla tehty purkkaviritys.
