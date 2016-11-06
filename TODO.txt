@@ -1,10 +1,11 @@
 twitter bot features:
 -reply muistutus, kun uus reply tullut
--reply tarkistus jos v‰‰r‰ k‰ytt‰j‰ kohteena
+-reply tarkistus, jos v√§√§r√§ k√§ytt√§j√§ kohteena
 -estoja tietyille riveille (linkit, nimet jne.)
 -poista direct messaging toiminto
--botin prosessi kaatui, selvit‰ miksi
+-botin prosessi kaatuilee, selvit√§ miksi (ilmeisesti ongelmia reconnectauksen kanssa eli ota selv√§√§ connect/reconnect/disconnect-systeemin toiminnasta)
 -logiominaisuus debuggausta varten (importlogging)
+-rivinvaihto kuntoon
 -chardet detection (  y = chardet.detect(rest) if y['encoding'] != 'utf-8' or y['encoding'] != 'ascii': rest = rest.decode(y['encoding']).encode('utf-8') <- tos hostaaja ano
                       coodasin sulle chardet detectio )
--rivinvaihto
+                      
